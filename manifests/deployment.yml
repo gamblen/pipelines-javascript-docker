@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gamblenpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gamblenpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gamblenpipelinesjavascriptdocker 
+          image: nicmycontainerregistry.azurecr.io/gamblenpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
